@@ -99,6 +99,7 @@ body {
 
 .form-group {
   display: flex;
+  flex-direction: column;
   gap: 15px;
   width: 100%;
 }
@@ -129,9 +130,10 @@ button {
   border: none;
   border-radius: 12px;
   padding: 0 28px;
-  min-width: 160px;
-  height: 56px;
-  font-size: 17px;
+  width: 100%;
+  min-width: 0;
+  height: 48px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -139,12 +141,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-button:hover {
-  background-color: #005a9e;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 113, 197, 0.3);
+  margin-top: 10px;
 }
 
 /* Icon spacing */
@@ -342,6 +339,82 @@ select {
   color: #475569;
 }
 
+/* Attendees Section */
+.attendees-section {
+  margin-top: 56px;
+  padding: 40px 36px 32px 36px;
+  background: white;
+  border-radius: 24px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.attendees-section h3 {
+  color: #64748b;
+  font-size: 17px;
+  margin-bottom: 32px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.teams-grid .team-attendees {
+  padding: 24px 18px;
+  border-radius: 16px;
+  background: #fff;
+  min-height: 100px;
+  box-shadow: 0 2px 12px rgba(0, 60, 116, 0.06);
+  border: 2px solid #bae6fd;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.team-attendees.water {
+  background-color: #e0f7fa;
+  border-color: #7dd3fc;
+}
+.team-attendees.zero {
+  background-color: #f0fdf4;
+  border-color: #6ee7b7;
+}
+.team-attendees.power {
+  background-color: #fff7ed;
+  border-color: #fdba74;
+}
+
+.team-attendees .team-name {
+  font-size: 17px;
+  font-weight: 600;
+  color: #0071c5;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.attendee-list {
+  list-style: none;
+  margin: 12px 0 0 0;
+  padding: 0;
+  font-size: 1.08em;
+  color: #333;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.attendee-list li {
+  padding: 0 10px 0 0;
+  border-bottom: none;
+  font-size: 1em;
+  color: #334155;
+  margin-left: 0;
+  display: inline;
+  background: none;
+}
+
 /* Mobile responsive */
 @media (max-width: 768px) {
   .hero {
@@ -373,6 +446,9 @@ select {
   }
 
   .teams-grid {
+    grid-template-columns: 1fr;
+  }
+}
     grid-template-columns: 1fr;
   }
 }
